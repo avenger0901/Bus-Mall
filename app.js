@@ -29,6 +29,9 @@ const initializeNewProduct = () => {
     console.log(randomProduct1);
     console.log(randomProduct2);
     console.log(randomProduct3);
+    if (voteTime === 25){
+        document.querySelector('button').disabled = true;
+    }
 };
 document.querySelector('button').addEventListener('click', (initializeNewProduct));
 
