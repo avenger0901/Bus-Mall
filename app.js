@@ -29,8 +29,8 @@ const initializeNewProduct = () => {
     console.log(randomProduct1);
     console.log(randomProduct2);
     console.log(randomProduct3);
-    if (voteTime === 25){
-        document.querySelector('button').disabled = true;
+    if (voteTime === 26){
+        document.getElementById('three-products').classList.add('hidden-images');
     }
 };
 document.querySelector('button').addEventListener('click', (initializeNewProduct));

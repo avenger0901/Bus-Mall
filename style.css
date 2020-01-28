@@ -7,3 +7,6 @@ img{
     flex-direction: row;
     justify-content: space-evenly;
 }
+.hidden-images{
+    display: none !important;
+};
