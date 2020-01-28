@@ -36,7 +36,7 @@ export const productData = [{
 {
     id: 'cthuhu',
     Name:'Cthuhu',
-    image:'../assets/ctuhu.jpg'
+    image:'../assets/cthulhu.jpg'
 },
 {
     id: 'dog-duck',
@@ -78,9 +78,24 @@ export const productData = [{
     Name:'Tauntaun',
     image:'../assets/tauntaun.jpg'
 },
-
-
-
-
-
+{
+    id: 'unicorn',
+    Name:'Unicorn',
+    image:'../assets/unicorn.jpg'
+},
+{
+    id: 'usb',
+    Name:'USB',
+    image:'../assets/usb.gif'
+},
+{
+    id: 'water-can',
+    Name:'Water Can',
+    image:'../assets/water-can.jpg'
+},
+{
+    id: 'wine-glass',
+    Name:'Wine Glass',
+    image:'../assets/wine-glass.jpg'
+}
 ];
