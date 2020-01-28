@@ -71,7 +71,7 @@ export const productData = [{
 {
     id: 'sweep',
     Name:'Sweep',
-    image:'../assets/sweep.jpg'
+    image:'../assets/sweep.png'
 },
 {
     id: 'tauntaun',

@@ -1,0 +1,9 @@
+img{
+    height: 200px;
+    widows: 20px;
+}
+#three-products{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
