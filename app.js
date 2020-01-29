@@ -1,13 +1,18 @@
 import { productData } from './data/product_data.js';
 import { ProductArray } from './product-array.js';
-
+export const findById = (someId, someArray) => {
+    for (let i = 0 ; i < someArray.length; i++){
+        const drink = someArray[i];
+        if (drink.id === someId)
+            return drink;
+    }
+};
 const productImages = document.querySelectorAll('img');
 const products = new ProductArray(productData);
-let voteTime = 0;
 
 
 const initializeNewProduct = () => {
-    voteTime++;
+
     let randomProduct1 = products.getRandomProduct();
     let randomProduct2 = products.getRandomProduct();
     let randomProduct3 = products.getRandomProduct();
@@ -35,23 +40,36 @@ const initializeNewProduct = () => {
     productName1.textContent = randomProduct1.Name;
     productName2.textContent = randomProduct2.Name;
     productName3.textContent = randomProduct3.Name;
+};
 
- 
+const button = document.getElementById('next-button');
+
+let voteTime = 0;
+let voteDetalsArray = [];
+button.addEventListener('click', (e) => {
+    e.preventDefault();
+    const form = document.querySelector('form');
+    const formData = new FormData(form);
+    const selectProductId = formData.get('products');
+    voteTime++;
+    console.log(voteTime, '&&&&&&&&&');
+    const productVotedArray = findById(selectProductId, voteDetalsArray);
+    if (productVotedArray){
+        productVotedArray.votes++;
+    } else {
+        voteDetalsArray.push({
+            id: selectProductId,
+            votes: 1,
+        });
+    }
+    
+console.log(productVotedArray, '=======');
+document.querySelector('input[name="products"]:checked').checked = false;
+    localStorage.setItem('votes', JSON.stringify(voteDetalsArray));
+    initializeNewProduct();
     if (voteTime === 26){
         document.getElementById('three-products').classList.add('hidden-images');
     }
-
-};
-
-const form = document.querySelector('form');
-const button = document.getElementById('next-button');
-
-button.addEventListener('click', (e) => {
-    e.preventDefault();
-
-
-
-   
 
 });
 initializeNewProduct();
