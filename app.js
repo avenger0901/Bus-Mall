@@ -64,11 +64,12 @@ button.addEventListener('click', (e) => {
     }
     
 console.log(productVotedArray, '=======');
-document.querySelector('input[name="products"]:checked').checked = false;
+    document.querySelector('input[name="products"]:checked').checked = false;
     localStorage.setItem('votes', JSON.stringify(voteDetalsArray));
     initializeNewProduct();
     if (voteTime === 26){
         document.getElementById('three-products').classList.add('hidden-images');
+        
     }
 
 });
