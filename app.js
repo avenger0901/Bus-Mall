@@ -63,13 +63,21 @@ button.addEventListener('click', (e) => {
         });
     }
     
-console.log(productVotedArray, '=======');
     document.querySelector('input[name="products"]:checked').checked = false;
     localStorage.setItem('votes', JSON.stringify(voteDetalsArray));
     initializeNewProduct();
     if (voteTime === 26){
-        document.getElementById('three-products').classList.add('hidden-images');
-        
+        document.getElementById('hide-image').classList.add('hidden-images');
+        var a = document.createElement('a');
+        var br = document.createElement('button');
+        var linkText = document.createTextNode('Click Here For Vote Results');
+        br.appendChild(linkText);
+        a.appendChild(br);
+        a.title = 'myVotes';
+        a.href = './results.html';
+        document.body.appendChild(a);
+        button.style.display = 'none';
+          
     }
 
 });

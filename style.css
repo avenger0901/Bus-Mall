@@ -1,12 +1,46 @@
 img{
-    height: 200px;
+    height: 250px;
     widows: 20px;
 }
-#three-products{
+.three-products{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    border: solid 20px steelblue;
+    padding: 20px;
+  
+}
+
+*{
+background-color:rgb(248, 194, 172);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+h1{
+    color:rgb(18, 113, 238);
+    font-weight: 200%;
+    background-color: rgb(159, 245, 245);
+    padding: 20px;
+    
+
 }
 .hidden-images{
-    display: none !important;
-};
+    display: none;
+}
+
+#alignPicture{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#nextpage-button{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+button{
+   height: 30px;
+   border-radius: 10px;
+   background-color: turquoise;
+}
